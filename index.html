@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="RH20T">
+  <meta name="keywords" content="RH20T, Robotics, Robot Learning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>RH20T: A Robotic Dataset for Learning Diverse Skills in One-Shot</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/favicon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -42,6 +42,7 @@
 </head>
 <body>
 
+<!--
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -81,6 +82,7 @@
 
   </div>
 </nav>
+-->
 
 
 <section class="hero">
@@ -88,39 +90,39 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">RH20T: A Robotic Dataset for Learning Diverse
+            Skills in One-Shot</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://fang-haoshu.github.io/">Hao-Shu Fang</a>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://tonyfang.net/">Hongjie Fang</a>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="https://github.com/Vladimirovich2019">Zhenyu Tang</a>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="https://github.com/todibo99">Jirong Liu</a>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              <a href="https://github.com/dadadadawjb">Junbo Wang</a>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+              <a href="https://www.haoyizhu.site/">Haoyi Zhu</a>,
             </span>
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://www.mvig.org/">Cewu Lu</a>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block">Shanghai Jiao Tong University</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://openreview.net/pdf?id=YhRKICWgE9"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -128,6 +130,7 @@
                   <span>Paper</span>
                 </a>
               </span>
+              <!--
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
@@ -137,7 +140,9 @@
                   <span>arXiv</span>
                 </a>
               </span>
+              -->
               <!-- Video Link. -->
+              <!--
               <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
@@ -147,7 +152,9 @@
                   <span>Video</span>
                 </a>
               </span>
+              -->
               <!-- Code Link. -->
+              <!--
               <span class="link-block">
                 <a href="https://github.com/google/nerfies"
                    class="external-link button is-normal is-rounded is-dark">
@@ -157,14 +164,15 @@
                   <span>Code</span>
                   </a>
               </span>
+              -->
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href="https://rh20t.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Dataset Comming Soon</span>
                   </a>
             </div>
 
@@ -179,68 +187,185 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
+        <source src="./static/videos/plug.mp4"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        RH20T includes millions of <code>&lt;Human Demonstration, Robot Manipulation&gt;</code> pairs for each task.
       </h2>
     </div>
   </div>
 </section>
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            A key challenge in learning task and motion planning in open domains is how to acquire diverse and generalizable skills for robots. Recent research in one-shot imitation learning has shown promise in transferring trained policies to new tasks based on demonstrations. This feature is attractive for enabling robots to acquire new skills and improving task and motion planning. However, due to limitations in the training dataset, the current focus of the community has mainly been on simple cases, such as push or pick-place tasks, relying solely on visual guidance. In reality, there are many complex skills, some of which may even require both visual and tactile perception to solve.
+          </p>
+          <p>
+             This paper aims to unlock the potential for an agent to generalize to hundreds of real-world skills with multi-modal perception. To achieve this, we have collected a dataset comprising over 110,000 contact-rich robot manipulation sequences across diverse skills, contexts, robots, and camera viewpoints, all collected in the real world. Each sequence in the dataset includes visual, force, audio, and action information, along with a corresponding human demonstration video. We have invested significant efforts in calibrating all the sensors and ensuring a high-quality dataset. The dataset will be made publicly available.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Tasks</h2>
+        <div class="content has-text-justified">
+          <p>
+            We select 48 tasks from <a href="https://sites.google.com/view/rlbench">RLBench</a>, 29 tasks from <a href="https://meta-world.github.io/">MetaWorld</a>, and introduce 70 self-proposed tasks that are frequently encountered and achievable by robots. Here are some selected tasks:
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
+        <div class="item item-task208">
+          <video poster="" id="task208" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/task208.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
+        <div class="item item-task9">
+          <video poster="" id="task" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/task9.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
+        <div class="item item-task11">
+          <video poster="" id="task11" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/task11.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
+        <div class="item item-task19">
+          <video poster="" id="task19" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/task19.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
+        <div class="item item-task29">
+          <video poster="" id="task29" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/task29.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
+        <div class="item item-task30">
+          <video poster="" id="task30" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/task30.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
+        <div class="item item-task53">
+          <video poster="" id="task53" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/task53.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
+        <div class="item item-task63">
+          <video poster="" id="task63" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/task63.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-task66">
+          <video poster="" id="task66" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/task66.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-task86">
+          <video poster="" id="task86" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/task86.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-task101">
+          <video poster="" id="task101" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/task101.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-task112">
+          <video poster="" id="task112" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/task112.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-task127">
+          <video poster="" id="task127" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/task127.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Tele-Operation</h2>
+        <div class="column">
+          <div class="columns is-centered">
+            <div class="column content has-text-justified">
+              <p>
+                Unlike previous methods that simplify the tele-operation interface using 3D mice, VR remotes, or mobile phones, we place emphasis on the importance of intuitive and accurate tele-operation in collecting contact-rich robot manipulation data. 
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <!-- Setup. -->
+      <div class="column has-text-centered">
+        <div class="content">
+          <h4 class="title">Platform Setup</h4>
+          <image src="./static/images/teleop0.png" height="60px">
+        </div>
+        <div class="column content has-text-justified">
+          <p>
+            Each platform contains a robot arm with force-torque sensor, gripper and 1-2 inhand cameras, 8-10 global RGBD cameras and 2 microphones for data collection. A haptic device and a pedal are utilized to allow the operator to tele-operate the robot intuitively. These devices are all linked to a data collection workstation. 
+          </p>
+        </div>
+      </div>
+      <!--/ Visual Effects. -->
+
+      <!-- Matting. -->
+      <div class="column has-text-centered">
+        <div class="content">
+          <h4 class="title">Data Collection</h4>
+          <video id="dollyzoom" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/teleop2.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -255,61 +380,69 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Visualizations</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            We visualize the point cloud generated by fusing the RGBD data from these multi-view cameras. The red pyramids indicate the camera poses. Additionally, the robot model is rendered in the scene based on the joint angles recorded in our dataset. In the right image, it is evident that all the cameras are calibrated with respect to the robot's base frame, and all the recorded data are synchronized in the temporal domain.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+  </div>
+</section>
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-task6">
+          <video poster="" id="task6-vis"  autoplay muted loop playsinline  height="100%">
+            <source src="./static/videos/vis1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-task207">
+          <video poster="" id="task207-vis"  autoplay muted loop playsinline  height="100%">
+            <source src="./static/videos/vis2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-task41">
+          <video poster="" id="task41-vis"  autoplay muted loop playsinline  height="100%">
+            <source src="./static/videos/vis3.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-task96">
+          <video poster="" id="task96-vis" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/vis4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-task52">
+          <video poster="" id="task52-vis" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/vis5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-task12">
+          <video poster="" id="task12-vis" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/vis6.mp4"
+                    type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
   </div>
 </section>
 
 
+<!--
 <section class="section">
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
 
-      <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Visual Effects</h2>
@@ -323,9 +456,7 @@
           </video>
         </div>
       </div>
-      <!--/ Visual Effects. -->
 
-      <!-- Matting. -->
       <div class="column">
         <h2 class="title is-3">Matting</h2>
         <div class="columns is-centered">
@@ -343,14 +474,11 @@
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
+    
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Animation</h2>
 
-        <!-- Interpolating. -->
         <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
@@ -382,9 +510,7 @@
           </div>
         </div>
         <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
+        
         <h3 class="title is-4">Re-rendering the input video</h3>
         <div class="content has-text-justified">
           <p>
@@ -403,53 +529,26 @@
                     type="video/mp4">
           </video>
         </div>
-        <!--/ Re-rendering. -->
 
       </div>
     </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
 
   </div>
 </section>
+-->
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+    <pre><code>@inproceedings{
+    fang2023rh20t,
+    title = {RH20T: A Robotic Dataset for Learning Diverse Skills in One-Shot},
+    author = {Fang, Hao-Shu and Fang, Hongjie and Tang, Zhenyu and Liu, Jirong and Wang, Junbo and Zhu, Haoyi and Lu, Cewu},
+    booktitle = {RSS 2023 Workshop on Learning for Task and Motion Planning},
+    year = {2023}
+}
+</code></pre>
   </div>
 </section>
 
@@ -458,12 +557,14 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="https://openreview.net/pdf?id=YhRKICWgE9">
         <i class="fas fa-file-pdf"></i>
       </a>
+      <!--
       <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
+      -->
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
@@ -471,14 +572,7 @@
           <p>
             This website is licensed under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            Commons Attribution-ShareAlike 4.0 International License</a>. Modified upon original <a href="https://nerfies.github.io/"> Nerfies </a> website (<a href="https://github.com/nerfies/nerfies.github.io">source</a>). The robot icons are created by <a href="https://www.flaticon.com/free-icons/robot" title="robot icons">smalllikeart @ Flaticon</a>.
           </p>
         </div>
       </div>
