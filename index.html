@@ -473,20 +473,20 @@
         <div class="content has-text-justified">
           <p>
             RGB with robot info: <br>
-            RH20T_cfg1.tar.gz()([Google Drive]()|[Baidu Cloud]())
-            RH20T_cfg2.tar.gz([Google Drive]()|[Baidu Cloud]()) 
-            RH20T_cfg3.tar.gz([Google Drive]()|[Baidu Cloud]()) 
-            RH20T_cfg4.tar.gz([Google Drive]()|[Baidu Cloud]()) 
-            RH20T_cfg5.tar.gz([Google Drive]()|[Baidu Cloud]()) 
-            RH20T_cfg6.tar.gz([Google Drive]()|[Baidu Cloud]()) 
-            RH20T_cfg7.tar.gz([Google Drive]()|[Baidu Cloud]())  
+            RH20T_cfg1.tar.gz(178G)([Google Drive](https://drive.google.com/file/d/1xbFMNQDYZKMf_jL4f6e06iT95BZQe4eG/view?usp=sharing)|[Baidu Cloud](https://pan.baidu.com/s/1a-Ex9653TWNr8N5e4jcXsw?pwd=gok9))
+            RH20T_cfg2.tar.gz(80G)([Google Drive](https://drive.google.com/file/d/1dCRwmdn3cg2330zhY0lIPvG6Q9YGoCYz/view?usp=sharing)|[Baidu Cloud](https://pan.baidu.com/s/18Gfyyl4NTxVCauEb66N3Xg?pwd=9ugw)) 
+            RH20T_cfg3.tar.gz(26G)([Google Drive](https://drive.google.com/file/d/1uwieq-EbA_eTXE668ekypQV1cO9PDfES/view?usp=sharing)|[Baidu Cloud](https://pan.baidu.com/s/1PAJ8Ewqp8xNIPughHuHZJw?pwd=z8qq)) 
+            RH20T_cfg4.tar.gz(88G)([Google Drive](https://drive.google.com/file/d/1fmVJMyiiKw8qOemU5FPzsW1NT3f5Kyjx/view?usp=sharing)|[Baidu Cloud](https://pan.baidu.com/s/1vjnqyZtVk3Zq0llM1f_7mA?pwd=vi7m)) 
+            RH20T_cfg5.tar.gz(37G)([Google Drive](https://drive.google.com/file/d/17QgZ2HNdOAzF4krJ4eegH1rWnUTXfWDm/view?usp=sharing)|[Baidu Cloud](https://pan.baidu.com/s/19eD1uyvydGyWenNHb5ffVA?pwd=kqpj)) 
+            RH20T_cfg6.tar.gz(76G)([Google Drive](https://drive.google.com/file/d/1Ytio7KTeU4gFlZNzl0-oX8wG-57VAbE9/view?usp=sharing)|[Baidu Cloud](https://pan.baidu.com/s/1JlIVz12bQSTTTiyXYCDIiA?pwd=h6io)) 
+            RH20T_cfg7.tar.gz(37G)([Google Drive](https://drive.google.com/file/d/1ddwXNcRV3oi2mpMTLyhDvttwdd0lGRgX/view?usp=sharing)|[Baidu Cloud](https://pan.baidu.com/s/1i2WINgYZUzQWzcsMSGiyYA?pwd=009p))  
             <br>
             Depth:
             RH20T_cfg1_depth.tar.gz([Google Drive]()|[Baidu Cloud]())
             RH20T_cfg2_depth.tar.gz([Google Drive]()|[Baidu Cloud]()) 
-            RH20T_cfg3_depth.tar.gz([Google Drive]()|[Baidu Cloud]()) 
-            RH20T_cfg4_depth.tar.gz([Google Drive]()|[Baidu Cloud]()) 
-            RH20T_cfg5_depth.tar.gz([Google Drive]()|[Baidu Cloud]()) 
+            RH20T_cfg3_depth.tar.gz([Google Drive](https://drive.google.com/file/d/1aekLEcX1ruS9f2z6900ys5t_U_OJnEzQ/view?usp=sharing)|[Baidu Cloud]()) 
+            RH20T_cfg4_depth.tar.gz([Google Drive](https://drive.google.com/file/d/1cPuQ9LV_Kn2BEcr_a5AKd8or5xRvioYA/view?usp=sharing)|[Baidu Cloud]()) 
+            RH20T_cfg5_depth.tar.gz([Google Drive](https://drive.google.com/file/d/1-TCrstA_FMuYqb9SbmFnos6f8kuzlkQM/view?usp=sharing)|[Baidu Cloud]()) 
             RH20T_cfg6_depth.tar.gz([Google Drive]()|[Baidu Cloud]()) 
             RH20T_cfg7_depth.tar.gz([Google Drive]()|[Baidu Cloud]()) 
           </p>
@@ -496,20 +496,43 @@
           <p>
 |-- RH20T
     |-- RH20T_cfg1
-    |   |-- scene_0000/
-    |   |-- scene_0001/
-    |   |-- ... ...
-    |   `-- scene_0189/
+    |   |-- calib/                                           #
+    |   |-- task_0001_user_0001_scene_0001_cfg_0001/          
+    |   |    |-- metadata.json                               #
+    |   |    |-- cam_[serious_number]/
+    |   |    |    |-- color.mp4
+    |   |    |    |-- timestamps.npy
+    |   |    |    `-- depth.mp4 (optional)
+    |   |    |-- transformed/
+    |   |    |    |-- tcp.npy                                #
+    |   |    |    |-- tcp_base.npy                           #
+    |   |    |    |-- joint.npy                              #
+    |   |    |    |-- gripper.npy                            #
+    |   |    |    |-- force_torque.npy                       #
+    |   |    |    |-- force_torque_base.npy                  #
+    |   |    |    `-- high_freq_data.npy                     #
+    |   |    `-- audio_mixed/
+    |   |
+    |   |-- task_0001_user_0001_scene_0001_cfg_0001_human/
+    |   |    |-- metadata.json                               #
+    |   |    |-- cam_[serious_number]/
+    |   |    |    |-- color.mp4
+    |   |    |    |-- timestamps.npy
+    |   |    |    `-- depth.mp4 (optional)
+    |   |    `-- audio_mixed/
+    |   |
+    |   |
+    |   `-- ... ...
     |
     |
-    |-- RH20T_cfg2
-    |   |-- same as above
+    |-- RH20T_cfg2/
+    |   `-- same as above
     |
     |
     |-- ...
     |
     |
-    `-- RH20T_cfg7
+    `-- RH20T_cfg7/
           </p>
         </div>
       </div>
