@@ -470,8 +470,9 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3"><a id="download">Download</a></h2>
-        <p><b>Caution: The RH20T dataset comprises volunteer-recorded human-robot interactions, possibly featuring volunteers' faces and voices. Exercise care to avoid inspecting or sharing sensitive content; kindly utilize the dataset solely for model training purposes.
+        <p align="left"><b>Caution: The RH20T dataset comprises volunteer-recorded human-robot interactions, possibly featuring volunteers' faces and voices. Exercise care to avoid inspecting or sharing sensitive content; kindly utilize the dataset solely for model training purposes.
         </b></p>
+        <br>
         <div class="content has-text-justified">
           <p>
             <b>RGB with robot info:</b> <br>
@@ -505,25 +506,25 @@
       <pre style="font-family: Courier; font-size:20px">
 |-- RH20T
     |-- RH20T_cfg1
-    |   |-- calib/                                           # Calibration folder, including calibration-time Gripper Cartesian pose, intrinsic and extrinsic matrices etc.
+    |   |-- calib/                            # Calibration folder, including calibration-time Gripper Cartesian pose, intrinsic and extrinsic matrices etc.
     |   |-- task_0001_user_0001_scene_0001_cfg_0001/          
-    |   |    |-- metadata.json                               # Robot manipulation scene metadata, including scene finishing timestamp, task completion rating (0-9), calibration timestamp and quality etc.
+    |   |    |-- metadata.json                # Robot manipulation scene metadata, including scene finishing timestamp, task completion rating (0 denotes robot failure, 1 denotes task failure, 2-9 denotes completion quality, higher is better), calibration timestamp and calibration quality (0 means some cameras are not calibrated, 1-5 means calibration accuracy, lower is better), etc.
     |   |    |-- cam_[serial_number]/
-    |   |    |    |-- color.mp4
-    |   |    |    |-- timestamps.npy
-    |   |    |    `-- depth.mp4 (optional)
+    |   |    |    |-- color.mp4               # color images, encode in video. The extraction code is available in our API code.
+    |   |    |    |-- timestamps.npy          # timestamp for each image, our extraction code will use it to decode images.
+    |   |    |    `-- depth.mp4 (optional)    # depth images, encode in video. The extraction code is available in our API code.
     |   |    |-- transformed/
-    |   |    |    |-- tcp.npy                                # Gripper Cartesian pose in each cam's coord, {serial number: [{"timestamp": ..., "tcp": ..., "robot_ft": ...}]}, where "tcp" values are xyz+quat (7D) Gripper Cartesian poses
-    |   |    |    |-- tcp_base.npy                           # Gripper Cartesian pose in base coord, {serial number: [{"timestamp": ..., "tcp": ..., "robot_ft": ...}]}, where "tcp" values are xyz+quat (7D) Gripper Cartesian poses
-    |   |    |    |-- joint.npy                              # Joint angles, {serial number: {timestamp: joint angle array}}
-    |   |    |    |-- gripper.npy                            # Gripper commands and information, {serial number: {timestamp: {"gripper_command": 3D array, "gripper_info": 3D array}}}, where the 1st element in the 3D array is gripper width (0-100)
-    |   |    |    |-- force_torque.npy                       # 6-DoF force/torque in cam's coord, {serial number: [{"timestamp": ..., "zeroed": ..., "raw": ...}]}, where "zeroed" values are pre-processed
-    |   |    |    |-- force_torque_base.npy                  # 6-DoF force/torque in base coord, {serial number: [{"timestamp": ..., "zeroed": ..., "raw": ...}]}, where "zeroed" values are pre-processed
-    |   |    |    `-- high_freq_data.npy                     # High frequency data, {serial number: [{"timestamp": ..., "zeroed": ..., "raw": ..., "tcp": ...}]}
+    |   |    |    |-- tcp.npy                 # Gripper Cartesian pose in each cam's coord, {serial number: [{"timestamp": ..., "tcp": ..., "robot_ft": ...}]}, where "tcp" values are xyz+quat (7D) Gripper Cartesian poses
+    |   |    |    |-- tcp_base.npy            # Gripper Cartesian pose in base coord, {serial number: [{"timestamp": ..., "tcp": ..., "robot_ft": ...}]}, where "tcp" values are xyz+quat (7D) Gripper Cartesian poses
+    |   |    |    |-- joint.npy               # Joint angles, {serial number: {timestamp: joint angle array}}
+    |   |    |    |-- gripper.npy             # Gripper commands and information, {serial number: {timestamp: {"gripper_command": 3D array, "gripper_info": 3D array}}}, where the 1st element in the 3D array is gripper width (0-100)
+    |   |    |    |-- force_torque.npy        # 6-DoF force/torque in cam's coord, {serial number: [{"timestamp": ..., "zeroed": ..., "raw": ...}]}, where "zeroed" values are pre-processed
+    |   |    |    |-- force_torque_base.npy   # 6-DoF force/torque in base coord, {serial number: [{"timestamp": ..., "zeroed": ..., "raw": ...}]}, where "zeroed" values are pre-processed
+    |   |    |    `-- high_freq_data.npy      # High frequency data, {serial number: [{"timestamp": ..., "zeroed": ..., "raw": ..., "tcp": ...}]}
     |   |    `-- audio_mixed/
     |   |
     |   |-- task_0001_user_0001_scene_0001_cfg_0001_human/
-    |   |    |-- metadata.json                               # Human demonstration metadata, including scene starting and finishing timestamps, calibration timestamp and quality
+    |   |    |-- metadata.json                # Human demonstration metadata, including scene starting and finishing timestamps, calibration timestamp and quality
     |   |    |-- cam_[serial_number]/
     |   |    |    |-- color.mp4
     |   |    |    |-- timestamps.npy
