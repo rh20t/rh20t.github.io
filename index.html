@@ -507,12 +507,12 @@
 |-- RH20T
     |-- RH20T_cfg1
     |   |-- calib/                            # Calibration folder, including calibration-time Gripper Cartesian pose, intrinsic and extrinsic matrices etc.
-    |   |-- task_0001_user_0001_scene_0001_cfg_0001/          
+    |   |-- task_0001_user_0001_scene_0001_cfg_0001/        # Robotic manipulation data
     |   |    |-- metadata.json                # Robot manipulation scene metadata, including scene finishing timestamp, task completion rating (0 denotes robot failure, 1 denotes task failure, 2-9 denotes completion quality, higher is better), calibration timestamp and calibration quality (0 means some cameras are not calibrated, 1-5 means calibration accuracy, lower is better), etc.
-    |   |    |-- cam_[serial_number]/
-    |   |    |    |-- color.mp4               # color images, encode as video. The extraction code is available in our API code.
-    |   |    |    |-- timestamps.npy          # timestamp for each image, our extraction code will use it to decode images.
-    |   |    |    `-- depth.mp4 (optional)    # depth images, encode as video. The extraction code is available in our API code.
+    |   |    |-- cam_[serial_number]/         # Multiple cameras
+    |   |    |    |-- color.mp4               # Color images, encode as video. The extraction code is available in our API code.
+    |   |    |    |-- timestamps.npy          # Timestamp for each image, our extraction code will use it to decode images.
+    |   |    |    `-- depth.mp4 (optional)    # Depth images, encode as video. The extraction code is available in our API code.
     |   |    |-- transformed/
     |   |    |    |-- tcp.npy                 # Gripper Cartesian pose in each cam's coord, {serial number: [{"timestamp": ..., "tcp": ..., "robot_ft": ...}]}, where "tcp" values are xyz+quat (7D) Gripper Cartesian poses
     |   |    |    |-- tcp_base.npy            # Gripper Cartesian pose in base coord, {serial number: [{"timestamp": ..., "tcp": ..., "robot_ft": ...}]}, where "tcp" values are xyz+quat (7D) Gripper Cartesian poses
@@ -523,7 +523,7 @@
     |   |    |    `-- high_freq_data.npy      # High frequency data, {serial number: [{"timestamp": ..., "zeroed": ..., "raw": ..., "tcp": ...}]}
     |   |    `-- audio_mixed/
     |   |
-    |   |-- task_0001_user_0001_scene_0001_cfg_0001_human/
+    |   |-- task_0001_user_0001_scene_0001_cfg_0001_human/  # Human demonstration data corresponds to the above robotic manipulation
     |   |    |-- metadata.json                # Human demonstration metadata, including scene starting and finishing timestamps, calibration timestamp and quality
     |   |    |-- cam_[serial_number]/
     |   |    |    |-- color.mp4
