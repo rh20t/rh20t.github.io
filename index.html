@@ -478,6 +478,7 @@
         </p>
         <br>
           <p>
+            <b><a href="">task description file</a></b> <br>
             <b>RGB with robot info:</b> <br>
             RH20T_cfg1.tar.gz(178G)(<a href="https://drive.google.com/file/d/1xbFMNQDYZKMf_jL4f6e06iT95BZQe4eG/view?usp=sharing">Google Drive</a>|<a href="https://pan.baidu.com/s/1a-Ex9653TWNr8N5e4jcXsw?pwd=gok9">Baidu Cloud</a>) <br>
             RH20T_cfg2.tar.gz(80G)(<a href="https://drive.google.com/file/d/1dCRwmdn3cg2330zhY0lIPvG6Q9YGoCYz/view?usp=sharing">Google Drive</a>|<a href="https://pan.baidu.com/s/18Gfyyl4NTxVCauEb66N3Xg?pwd=9ugw">Baidu Cloud</a>) <br>
@@ -520,7 +521,7 @@
     |   |    |    |-- tcp.npy                 # Gripper Cartesian pose in each cam's coord, {serial number: [{"timestamp": ..., "tcp": ..., "robot_ft": ...}]}, where "tcp" values are xyz+quat (7D) Gripper Cartesian poses
     |   |    |    |-- tcp_base.npy            # Gripper Cartesian pose in base coord, {serial number: [{"timestamp": ..., "tcp": ..., "robot_ft": ...}]}, where "tcp" values are xyz+quat (7D) Gripper Cartesian poses
     |   |    |    |-- joint.npy               # Joint angles, {serial number: {timestamp: joint angle array}}
-    |   |    |    |-- gripper.npy             # Gripper commands and information, {serial number: {timestamp: {"gripper_command": 3D array, "gripper_info": 3D array}}}, where the 1st element in the 3D array is gripper width (0-100)
+    |   |    |    |-- gripper.npy             # Gripper commands and information, {serial number: {timestamp: {"gripper_command": 3D array, "gripper_info": 3D array}}}, where the 1st element in the 3D array is the actual gripper width in millimeters(0-110)
     |   |    |    |-- force_torque.npy        # 6-DoF force/torque in cam's coord, {serial number: [{"timestamp": ..., "zeroed": ..., "raw": ...}]}, where "zeroed" values are pre-processed
     |   |    |    |-- force_torque_base.npy   # 6-DoF force/torque in base coord, {serial number: [{"timestamp": ..., "zeroed": ..., "raw": ...}]}, where "zeroed" values are pre-processed
     |   |    |    `-- high_freq_data.npy      # High frequency data, {serial number: [{"timestamp": ..., "zeroed": ..., "raw": ..., "tcp": ...}]}
