@@ -516,7 +516,7 @@
     <pre><code>
 |-- RH20T
     |-- RH20T_cfg1
-    |   |-- calib/                            # Calibration folder, including calibration-time Gripper Cartesian pose, intrinsic and extrinsic matrices etc.
+    |   |-- calib/                            # Calibration folder, including calibration-time Gripper Cartesian pose, intrinsic and extrinsic matrices etc. Extrinsic matrices are the Aruco marker's Translations with respect to the camera frame.
     |   |-- task_0001_user_0001_scene_0001_cfg_0001/        # Robotic manipulation data
     |   |    |-- metadata.json                # Robot manipulation scene metadata, including scene finishing timestamp, task completion rating (0 denotes robot failure, 1 denotes task failure, 2-9 denotes completion quality, higher is better), calibration timestamp and calibration quality (0 means some cameras are not calibrated, 1-5 means calibration accuracy, lower is better), etc.
     |   |    |-- cam_[serial_number]/         # Multiple cameras
